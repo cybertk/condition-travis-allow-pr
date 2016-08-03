@@ -1,5 +1,6 @@
 {
-  "name": "@semantic-release/condition-travis",
+  "name": "@semantic-release/condition-travis-allow-pr",
+  "version": "0.1.0",
   "description": "make sure things only the right builds on travis get published",
   "author": "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me)",
   "bugs": {
