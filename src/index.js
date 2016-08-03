@@ -12,7 +12,7 @@ module.exports = function (pluginConfig, {env, options}, cb) {
     ))
   }
 
-  if (env.hasOwnProperty('TRAVIS_PULL_REQUEST') && env.TRAVIS_PULL_REQUEST !== 'false') {
+  if (pluginConfig.allowPR === false && env.hasOwnProperty('TRAVIS_PULL_REQUEST') && env.TRAVIS_PULL_REQUEST !== 'false') {
     return cb(new SRError(
       'This test run was triggered by a pull request and therefore a new version won’t be published.',
       'EPULLREQUEST'
